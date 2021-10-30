@@ -4,7 +4,7 @@ package OrbitalMechanics;
  * @author matth
  *
  */
-public abstract class CelestialBody 
+public abstract class OrbitalObject 
 {
 	//Instance Variables
 	private String name;
@@ -12,7 +12,7 @@ public abstract class CelestialBody
 	private double xVel, yVel;
 	
 	//Constructor
-	public CelestialBody(String Name)
+	public OrbitalObject(String Name)
 	{
 		name = Name;
 	}

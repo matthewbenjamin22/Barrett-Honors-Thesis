@@ -1,11 +1,11 @@
 package OrbitalMechanics;
 
-public class Attractor extends CelestialBody
+public class Planetoid extends OrbitalObject
 {
 
 	private int mass;
 	
-	public Attractor(String planetName) 
+	public Planetoid(String planetName) 
 	{
 		super(planetName);
 	}

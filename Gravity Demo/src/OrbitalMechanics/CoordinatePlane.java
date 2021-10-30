@@ -9,26 +9,26 @@ import java.util.ArrayList;
 public class CoordinatePlane 
 {	
 	//Instance Variables
-	private ArrayList<CelestialBody> ballList;
-	private ArrayList<Attractor> celestialBodyList;
+	private ArrayList<OrbitalObject> satList;
+	private ArrayList<Planetoid> planetoidList;
 	
 	//Constructor
 	public CoordinatePlane()
 	{
-		ballList = new ArrayList<CelestialBody>();
-		celestialBodyList = new ArrayList<Attractor>();
+		satList = new ArrayList<OrbitalObject>();
+		planetoidList = new ArrayList<Planetoid>();
 	}
 
 //==============================================================================================================================================
 //Getters, Setters, Adders, Removers, and Resetters
 	
 	//Getters
-	public ArrayList<CelestialBody> getBallList() { return ballList; }
-	public ArrayList<Attractor> getCelestialBodyList() { return celestialBodyList; }
+	public ArrayList<OrbitalObject> getBallList() { return satList; }
+	public ArrayList<Planetoid> getCelestialBodyList() { return planetoidList; }
 	
 	//Setters
-	public void setBallList(ArrayList<CelestialBody> newBallList) { ballList = newBallList; }
-	public void setCelestialBodyList(ArrayList<Attractor> newCelestialBodyList) { celestialBodyList = newCelestialBodyList; }
+	public void setBallList(ArrayList<OrbitalObject> newBallList) { satList = newBallList; }
+	public void setCelestialBodyList(ArrayList<Planetoid> newCelestialBodyList) { planetoidList = newCelestialBodyList; }
 	
 
 }
