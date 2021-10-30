@@ -1,6 +1,6 @@
 package OrbitalMechanics;
 
-public class Global 
+public abstract class Global 
 {
 	
 }

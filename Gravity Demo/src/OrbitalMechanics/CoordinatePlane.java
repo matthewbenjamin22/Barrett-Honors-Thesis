@@ -23,12 +23,17 @@ public class CoordinatePlane
 //Getters, Setters, Adders, Removers, and Resetters
 	
 	//Getters
-	public ArrayList<OrbitalObject> getBallList() { return satList; }
-	public ArrayList<Planetoid> getCelestialBodyList() { return planetoidList; }
+	public ArrayList<OrbitalObject> getSatList() { return satList; }
+	public ArrayList<Planetoid> getPlanetoidList() { return planetoidList; }
 	
 	//Setters
-	public void setBallList(ArrayList<OrbitalObject> newBallList) { satList = newBallList; }
-	public void setCelestialBodyList(ArrayList<Planetoid> newCelestialBodyList) { planetoidList = newCelestialBodyList; }
+	public void setSatList(ArrayList<OrbitalObject> newBallList) { satList = newBallList; }
+	public void setPlanetoidList(ArrayList<Planetoid> newCelestialBodyList) { planetoidList = newCelestialBodyList; }
 	
-
+	//Adders
+	public void addSat(OrbitalObject newSat) { satList.add(newSat);	}
+	public void addPlanetoid(Planetoid newPlanetoid) { planetoidList.add(newPlanetoid); }
+	
+	
+	
 }
