@@ -26,10 +26,23 @@ public abstract class Gravity
 		
 		//Calculate Total Gravitational Acceleration
 		double gravitationalAcceleration;
-		gravitationalAcceleration = GravitationalConstant * body.getMass();
+		gravitationalAcceleration = GravitationalConstant * orbiter.getMass() * body.getMass();
 		gravitationalAcceleration = gravitationalAcceleration / (totalDistance * totalDistance);
 		
-		//Determine how to split the total acceleration based on x and y distance
-				
+		//Determine how to split the total acceleration based on the angle
+		double angle = Math.asin(yDistance / totalDistance);
+		
+		//Now apply the formula
+		double xAcceleration = Math.cos(angle) * gravitationalAcceleration;
+		double yAcceleration = Math.sin(angle) * gravitationalAcceleration;
+		
+		if(orbiter.getMass() != 0)//Avoids divide-by-zero errors while allowing for massless particles
+		{
+			xAcceleration /= orbiter.getMass();
+			yAcceleration /= orbiter.getMass();
+		}
+		
+		//Now apply those new accelerations
+		orbiter.addVelocity(xAcceleration, yAcceleration);
 	}
 }
